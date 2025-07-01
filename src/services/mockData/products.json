@@ -1,0 +1,158 @@
+[
+  {
+    "Id": 1,
+    "title": "Handwoven Macrame Wall Hanging",
+    "description": "Beautiful bohemian wall art handcrafted with natural cotton cord. Features intricate knotwork patterns and wooden beads. Perfect for adding texture and warmth to any room.",
+    "price": 89.99,
+    "images": [
+      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500",
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500"
+    ],
+    "category": "Home Decor",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "Id": 2,
+    "title": "Ceramic Coffee Mug Set",
+    "description": "Set of 4 handthrown ceramic mugs with earthy glazes. Each mug is unique with slight variations that showcase the artisan's touch. Microwave and dishwasher safe.",
+    "price": 64.99,
+    "images": [
+      "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=500",
+      "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500"
+    ],
+    "category": "Kitchenware",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "Id": 3,
+    "title": "Hand-Knitted Wool Scarf",
+    "description": "Cozy merino wool scarf hand-knitted with a beautiful cable pattern. Available in natural earth tones. Soft, warm, and perfect for cold weather.",
+    "price": 78.50,
+    "images": [
+      "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=500",
+      "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=500"
+    ],
+    "category": "Clothing",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "Id": 4,
+    "title": "Wooden Cutting Board",
+    "description": "Premium hardwood cutting board crafted from sustainable walnut. Features juice groove and comfortable grip. Treated with food-safe mineral oil finish.",
+    "price": 45.00,
+    "images": [
+      "https://images.unsplash.com/photo-1556909114-5ba6127d0b71?w=500",
+      "https://images.unsplash.com/photo-1585515656376-5b1e833b2024?w=500"
+    ],
+    "category": "Kitchenware",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "Id": 5,
+    "title": "Handmade Leather Journal",
+    "description": "Artisan-crafted leather journal with hand-stitched binding. Features aged leather cover and cream-colored paper. Perfect for writing, sketching, or journaling.",
+    "price": 52.99,
+    "images": [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500",
+      "https://images.unsplash.com/photo-1531190260877-c8d11eb5afaf?w=500"
+    ],
+    "category": "Stationery",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "Id": 6,
+    "title": "Woven Basket Storage Set",
+    "description": "Set of 3 handwoven baskets in graduated sizes. Made from sustainable rattan with natural finish. Perfect for organizing and adding rustic charm to your home.",
+    "price": 95.00,
+    "images": [
+      "https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=500",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500"
+    ],
+    "category": "Home Decor",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "Id": 7,
+    "title": "Artisan Soap Gift Set",
+    "description": "Collection of 6 handmade soaps with natural ingredients. Includes lavender, eucalyptus, honey oat, charcoal, rose, and vanilla scents. Beautiful gift packaging included.",
+    "price": 34.99,
+    "images": [
+      "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=500",
+      "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=500"
+    ],
+    "category": "Bath & Body",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "Id": 8,
+    "title": "Hand-Painted Ceramic Vase",
+    "description": "Unique ceramic vase featuring hand-painted floral motifs. Each piece is one-of-a-kind with vibrant colors and artistic flair. Perfect for fresh or dried flowers.",
+    "price": 68.00,
+    "images": [
+      "https://images.unsplash.com/photo-1578749556568-bc2c40e68620?w=500",
+      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=500"
+    ],
+    "category": "Home Decor",
+    "inStock": false,
+    "featured": false
+  },
+  {
+    "Id": 9,
+    "title": "Embroidered Throw Pillow",
+    "description": "Decorative pillow with intricate hand-embroidered design. Features floral patterns in earth tones on natural linen fabric. Includes premium down insert.",
+    "price": 42.50,
+    "images": [
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500",
+      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500"
+    ],
+    "category": "Home Decor",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "Id": 10,
+    "title": "Handcrafted Wooden Spoons",
+    "description": "Set of 5 handcarved wooden spoons made from cherry wood. Each spoon has a unique grain pattern and smooth finish. Perfect for cooking and serving.",
+    "price": 28.99,
+    "images": [
+      "https://images.unsplash.com/photo-1556909114-5ba6127d0b71?w=500",
+      "https://images.unsplash.com/photo-1585515656376-5b1e833b2024?w=500"
+    ],
+    "category": "Kitchenware",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "Id": 11,
+    "title": "Crocheted Baby Blanket",
+    "description": "Soft and cozy baby blanket hand-crocheted with organic cotton yarn. Features delicate shell stitch pattern in soft pastels. Machine washable and hypoallergenic.",
+    "price": 85.00,
+    "images": [
+      "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=500",
+      "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=500"
+    ],
+    "category": "Baby",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "Id": 12,
+    "title": "Hand-Forged Iron Candle Holders",
+    "description": "Pair of rustic candle holders hand-forged by skilled metalworkers. Features twisted iron design with antique finish. Fits standard taper candles perfectly.",
+    "price": 76.00,
+    "images": [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500",
+      "https://images.unsplash.com/photo-1531190260877-c8d11eb5afaf?w=500"
+    ],
+    "category": "Home Decor",
+    "inStock": true,
+    "featured": false
+  }
+]
