@@ -28,10 +28,10 @@
   {
     "Id": 3,
     "title": "Hand-Knitted Wool Scarf",
-    "description": "Cozy merino wool scarf hand-knitted with a beautiful cable pattern. Available in natural earth tones. Soft, warm, and perfect for cold weather.",
+"description": "Cozy merino wool scarf hand-knitted with a beautiful cable pattern. Available in natural earth tones. Soft, warm, and perfect for cold weather.",
     "price": 78.50,
     "images": [
-      "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=500",
+      "https://images.unsplash.com/photo-1520637836862-4d197d17c886?w=500",
       "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=500"
     ],
     "category": "Clothing",
@@ -132,10 +132,10 @@
   {
     "Id": 11,
     "title": "Crocheted Baby Blanket",
-    "description": "Soft and cozy baby blanket hand-crocheted with organic cotton yarn. Features delicate shell stitch pattern in soft pastels. Machine washable and hypoallergenic.",
+"description": "Soft and cozy baby blanket hand-crocheted with organic cotton yarn. Features delicate shell stitch pattern in soft pastels. Machine washable and hypoallergenic.",
     "price": 85.00,
     "images": [
-      "https://images.unsplash.com/photo-1544966503-7cc5ac882d5f?w=500",
+      "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=500",
       "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=500"
     ],
     "category": "Baby",
