@@ -195,8 +195,8 @@ const Products = () => {
           </div>
         </div>
 
-        <div className="flex gap-8">
-          {/* Sidebar */}
+<div className="flex gap-8">
+          {/* Sidebar - handles both desktop and mobile responsive behavior */}
           <div className="hidden lg:block w-80 flex-shrink-0">
             <FilterSidebar
               categories={categories}
@@ -210,7 +210,7 @@ const Products = () => {
             />
           </div>
 
-          {/* Mobile Filter Sidebar */}
+          {/* Mobile Filter Overlay */}
           <FilterSidebar
             categories={categories}
             selectedCategory={selectedCategory}
