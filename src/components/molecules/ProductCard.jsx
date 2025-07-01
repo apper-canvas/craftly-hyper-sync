@@ -43,19 +43,7 @@ const ProductCard = ({ product }) => {
                 Handmade
               </Badge>
             </div>
-            <div className="absolute top-4 right-4 flex gap-2">
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={handleWishlistToggle}
-                className="bg-white/90 hover:bg-white shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-              >
-                <ApperIcon 
-                  name="Heart" 
-                  size={16} 
-                  className={isInWishlist(product.Id) ? 'text-red-500 fill-red-500' : 'text-gray-600'} 
-                />
-              </Button>
+            <div className="absolute top-4 right-4">
               {!product.inStock && (
                 <Badge variant="error">
                   Out of Stock
