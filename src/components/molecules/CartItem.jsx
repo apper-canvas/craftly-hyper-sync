@@ -3,18 +3,26 @@ import Button from '@/components/atoms/Button'
 import ApperIcon from '@/components/ApperIcon'
 import { useCart } from '@/hooks/useCart'
 
-const CartItem = ({ item }) => {
+const CartItem = ({ item, index }) => {
   const { updateQuantity, removeFromCart } = useCart()
+
+  console.log('CartItem render:', { 
+    productId: item.productId, 
+    title: item.title, 
+    quantity: item.quantity,
+    index: index 
+  })
 
   const handleQuantityChange = (newQuantity) => {
     if (newQuantity < 1) return
+    console.log('Updating quantity:', { productId: item.productId, newQuantity })
     updateQuantity(item.productId, newQuantity)
   }
 
   const handleRemove = () => {
+    console.log('Removing item:', { productId: item.productId, title: item.title })
     removeFromCart(item.productId)
   }
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}

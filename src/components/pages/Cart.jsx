@@ -61,18 +61,26 @@ const Cart = () => {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="space-y-4"
+className="space-y-4"
             >
-              {cartItems.map((item, index) => (
-                <motion.div
-                  key={item.productId}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                >
-                  <CartItem item={item} />
-                </motion.div>
-              ))}
+              {cartItems.map((item, index) => {
+                console.log('Rendering cart item:', { 
+                  productId: item.productId, 
+                  title: item.title, 
+                  quantity: item.quantity,
+                  index 
+                })
+                return (
+                  <motion.div
+                    key={`cart-item-${item.productId}-${index}`}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                  >
+                    <CartItem item={item} index={index} />
+                  </motion.div>
+                )
+              })}
             </motion.div>
           </div>
 

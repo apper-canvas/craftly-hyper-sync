@@ -15,17 +15,26 @@ export const useCart = () => {
     localStorage.setItem('craftly-cart', JSON.stringify(cartItems))
   }, [cartItems])
 
-  const addToCart = (product, quantity = 1) => {
+const addToCart = (product, quantity = 1) => {
+    console.log('addToCart called:', { 
+      productId: product.Id, 
+      title: product.title, 
+      quantity 
+    })
+    
     setCartItems(prevItems => {
+      console.log('Current cart items before update:', prevItems)
       const existingItem = prevItems.find(item => item.productId === product.Id)
       
       if (existingItem) {
+        console.log('Found existing item:', existingItem)
         const updatedItems = prevItems.map(item =>
           item.productId === product.Id
             ? { ...item, quantity: item.quantity + quantity }
             : item
         )
-        toast.success(`Updated ${product.title} quantity in cart`)
+        console.log('Updated cart items:', updatedItems)
+        toast.success(`Updated ${product.title} quantity to ${existingItem.quantity + quantity}`)
         return updatedItems
       } else {
         const newItem = {
@@ -35,8 +44,11 @@ export const useCart = () => {
           image: product.images[0],
           quantity: quantity
         }
+        console.log('Adding new item:', newItem)
+        const newItems = [...prevItems, newItem]
+        console.log('New cart items:', newItems)
         toast.success(`Added ${product.title} to cart`)
-        return [...prevItems, newItem]
+        return newItems
       }
     })
   }
