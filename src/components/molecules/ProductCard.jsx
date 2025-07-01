@@ -4,9 +4,11 @@ import Button from '@/components/atoms/Button'
 import Badge from '@/components/atoms/Badge'
 import ApperIcon from '@/components/ApperIcon'
 import { useCart } from '@/hooks/useCart'
+import { useWishlist } from '@/hooks/useWishlist'
 
 const ProductCard = ({ product }) => {
   const { addToCart } = useCart()
+  const { isInWishlist, addToWishlist, removeFromWishlist } = useWishlist()
 
   const handleAddToCart = (e) => {
     e.preventDefault()
@@ -14,6 +16,15 @@ const ProductCard = ({ product }) => {
     addToCart(product)
   }
 
+  const handleWishlistToggle = (e) => {
+    e.preventDefault()
+    e.stopPropagation()
+    if (isInWishlist(product.Id)) {
+      removeFromWishlist(product.Id)
+    } else {
+      addToWishlist(product)
+    }
+  }
   return (
     <motion.div
       whileHover={{ y: -5 }}
@@ -27,18 +38,30 @@ const ProductCard = ({ product }) => {
               alt={product.title}
               className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
             />
-            <div className="absolute top-4 left-4">
+<div className="absolute top-4 left-4">
               <Badge variant="sale" icon="Sparkles">
                 Handmade
               </Badge>
             </div>
-            {!product.inStock && (
-              <div className="absolute top-4 right-4">
+            <div className="absolute top-4 right-4 flex gap-2">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={handleWishlistToggle}
+                className="bg-white/90 hover:bg-white shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+              >
+                <ApperIcon 
+                  name="Heart" 
+                  size={16} 
+                  className={isInWishlist(product.Id) ? 'text-red-500 fill-red-500' : 'text-gray-600'} 
+                />
+              </Button>
+              {!product.inStock && (
                 <Badge variant="error">
                   Out of Stock
                 </Badge>
-              </div>
-            )}
+              )}
+            </div>
             <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </div>
           
@@ -57,21 +80,36 @@ const ProductCard = ({ product }) => {
               {product.description}
             </p>
             
-            <div className="flex items-center justify-between">
+<div className="flex items-center justify-between">
               <span className="text-2xl font-display font-bold bg-gradient-primary bg-clip-text text-transparent">
                 ${product.price}
               </span>
               
-              <Button
-                variant="primary"
-                size="sm"
-                icon="ShoppingCart"
-                onClick={handleAddToCart}
-                disabled={!product.inStock}
-                className="opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-              >
-                Add to Cart
-              </Button>
+              <div className="flex items-center gap-2">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={handleWishlistToggle}
+                  className="opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                >
+                  <ApperIcon 
+                    name="Heart" 
+                    size={16} 
+                    className={isInWishlist(product.Id) ? 'text-red-500 fill-red-500' : 'text-gray-600'} 
+                  />
+                </Button>
+                
+                <Button
+                  variant="primary"
+                  size="sm"
+                  icon="ShoppingCart"
+                  onClick={handleAddToCart}
+                  disabled={!product.inStock}
+                  className="opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                >
+                  Add to Cart
+                </Button>
+              </div>
             </div>
           </div>
         </div>

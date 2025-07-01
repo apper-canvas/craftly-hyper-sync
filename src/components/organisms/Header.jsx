@@ -6,15 +6,18 @@ import Button from '@/components/atoms/Button'
 import Badge from '@/components/atoms/Badge'
 import ApperIcon from '@/components/ApperIcon'
 import { useCart } from '@/hooks/useCart'
+import { useWishlist } from '@/hooks/useWishlist'
 
 const Header = ({ onSearch }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const location = useLocation()
   const { getCartCount } = useCart()
+  const { getWishlistCount } = useWishlist()
 
   const navItems = [
     { path: '/', label: 'Home' },
     { path: '/products', label: 'Shop All' },
+    { path: '/wishlist', label: 'Wishlist' },
     { path: '/about', label: 'About' },
     { path: '/contact', label: 'Contact' }
   ]
@@ -75,7 +78,7 @@ const Header = ({ onSearch }) => {
             <SearchBar onSearch={onSearch} />
           </div>
 
-          {/* Actions */}
+{/* Actions */}
           <div className="flex items-center gap-4">
             {/* Mobile Search */}
             <Button 
@@ -84,6 +87,20 @@ const Header = ({ onSearch }) => {
               icon="Search"
               className="md:hidden"
             />
+            
+            {/* Wishlist */}
+            <Link to="/wishlist">
+              <Button variant="ghost" size="sm" className="relative">
+                <ApperIcon name="Heart" size={20} />
+                {getWishlistCount() > 0 && (
+                  <div className="absolute -top-2 -right-2">
+                    <Badge variant="accent" size="sm">
+                      {getWishlistCount()}
+                    </Badge>
+                  </div>
+                )}
+              </Button>
+            </Link>
             
             {/* Cart */}
             <Link to="/cart">
@@ -98,7 +115,6 @@ const Header = ({ onSearch }) => {
                 )}
               </Button>
             </Link>
-
             {/* Mobile Menu Toggle */}
             <Button
               variant="ghost"
