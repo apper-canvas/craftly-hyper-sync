@@ -210,19 +210,20 @@ const Products = () => {
             />
           </div>
 
-          {/* Mobile Filter Overlay */}
-          <FilterSidebar
-            categories={categories}
-            selectedCategory={selectedCategory}
-            onCategoryChange={handleCategoryChange}
-            priceRange={priceRange}
-            selectedPriceRange={selectedPriceRange}
-            onPriceRangeChange={handlePriceRangeChange}
-            onClearFilters={handleClearFilters}
-            isOpen={isFilterOpen}
-            onClose={() => setIsFilterOpen(false)}
-          />
-
+{/* Mobile Filter Overlay - Only render when open */}
+          {isFilterOpen && (
+            <FilterSidebar
+              categories={categories}
+              selectedCategory={selectedCategory}
+              onCategoryChange={handleCategoryChange}
+              priceRange={priceRange}
+              selectedPriceRange={selectedPriceRange}
+              onPriceRangeChange={handlePriceRangeChange}
+              onClearFilters={handleClearFilters}
+              isOpen={isFilterOpen}
+              onClose={() => setIsFilterOpen(false)}
+            />
+          )}
           {/* Products Grid */}
           <div className="flex-1">
             <ProductGrid
